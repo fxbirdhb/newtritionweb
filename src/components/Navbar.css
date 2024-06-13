@@ -17,4 +17,10 @@
     background-color: #333;
     border-color: #333;
   }
-  
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* 确保导航条在其他内容上方 */
+  }
+    

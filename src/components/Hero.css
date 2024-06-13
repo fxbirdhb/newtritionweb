@@ -1,0 +1,67 @@
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 66.8vh;
+    background-color: rgba(76, 175, 80, 0.5); /* 50% 透明度的 #4CAF50 */
+    padding: 20px;
+  }
+  
+  .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .hero-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* 确保文本和按钮在垂直方向居中 */
+    color: white;
+    padding: 20px;
+  }
+  
+  .hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .btn-container {
+    margin-top: 20px; /* 确保按钮和文本之间有间距 */
+  }
+  
+  .btn-primary {
+    display: inline-block;
+    padding: 0; /* 移除默认的内边距 */
+    border: none; /* 移除默认的边框 */
+    background: none; /* 移除默认的背景 */
+  }
+  
+  .button-icon {
+    width: 100%; /* 确保按钮图标自适应 */
+    height: auto; /* 确保按钮图标自适应 */
+  }
+  
+  .btn-container.small .button-icon {
+    width: 100px;
+  }
+  
+  .btn-container.medium .button-icon {
+    width: 150px;
+  }
+  
+  .btn-container.large .button-icon {
+    width: 200px;
+  }
+  

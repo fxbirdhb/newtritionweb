@@ -1,15 +1,16 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Hero from './Hero';
 
 function Home() {
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-md-12">
-          <h1>Welcome to Our Product</h1>
-          <p>Our product provides exceptional value by improving your workflow and productivity.</p>
-          <p>We believe in simplicity, efficiency, and user-centered design.</p>
-        </div>
+    <div>
+      <Hero 
+        buttonSize="small" 
+        buttonImage="/images/download.svg" 
+        buttonLink="https://apps.apple.com/us/app/新煮意/id6463604621"
+      />
+      <div className="container">
+        {/* 这里可以添加其他内容 */}
       </div>
     </div>
   );

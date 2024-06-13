@@ -1,0 +1,45 @@
+.features-section {
+    margin: 50px 0;
+  }
+  
+  .features-section .row {
+    align-items: center;
+  }
+  
+  .features-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .features-section p {
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .feature-items {
+    margin-top: 20px;
+  }
+  
+  .feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .feature-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+  
+  .feature-item h3 {
+    font-size: 1.25rem;
+    color: #007bff;
+    margin-bottom: 5px;
+  }
+  
+  .feature-item p {
+    color: #555;
+  }
+  
