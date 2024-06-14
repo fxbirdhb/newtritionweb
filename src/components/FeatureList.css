@@ -1,0 +1,22 @@
+.feature-list {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  .feature:nth-child(1) {
+    flex: 0 0 60%;
+  }
+  
+  .feature:nth-child(2) {
+    flex: 0 0 35%;
+  }
+
+  .feature1:nth-child(1) {
+    flex: 0 0 35%;
+  }
+  
+  .feature1:nth-child(2) {
+    flex: 0 0 35%;
+  }
