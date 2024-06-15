@@ -1,37 +1,31 @@
 import React from 'react';
 import Feature from './Feature';
+import VideoFeature from './VideoFeature';
 import './FeatureList.css';
 
-function FeatureList() {
-  const features = [
-    {
-      title: "Writing, focus, and communication.",
-      description: "New Writing Tools and language capabilities help you write, summarize longer text, and prioritize notifications.",
-      image: "/images/feature1.png",
-      imageWidth: "60%", // 设置图片宽度为60%,
-      feature: "feature"
-    },
-    {
-      title: "Delightful images created just for you.",
-      description: "Create images to express yourself, craft Genmoji for conversations, or revisit favorite moments with your own memory movies.",
-      image: "/images/feature2.png",
-      imageWidth: "35%", // 设置图片宽度为30%
-      feature: "feature1"
-    }
-  ];
-
+function FeatureList({ features, featureWidths }) {
   return (
-    <div className="feature-list">
-      {features.map((feature, index) => (
-        <Feature 
-          key={index}
-          title={feature.title}
-          description={feature.description}
-          image={feature.image}
-          imageWidth={feature.imageWidth}
-          feature={feature.feature}
-        />
-      ))}
+    <div className="container">
+      <div className="row">
+        {features.map((feature, index) => {
+          const FeatureComponent = feature.type === 'video' ? VideoFeature : Feature;
+          return (
+            <div
+              key={index}
+              className={`col-lg-${featureWidths[index].lg} col-md-${featureWidths[index].md} col-sm-12 mb-4`}
+            >
+              <FeatureComponent
+                title={feature.title}
+                description={feature.description}
+                image={feature.image}
+                video={feature.video}
+                imageWidth={feature.imageWidth}
+                customStyles={feature.customStyles}
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

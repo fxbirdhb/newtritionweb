@@ -1,9 +1,9 @@
 import React from 'react';
 import './Feature.css';
 
-function Feature({ title, description, image, imageWidth, feature }) {
+function Feature({ title, description, image, imageWidth, customStyles }) {
   return (
-    <div className={feature}>
+    <div className="feature" style={customStyles}>
       <div className="feature-content">
         <h3 className="feature-title">{title}</h3>
         <p className="feature-description">{description}</p>

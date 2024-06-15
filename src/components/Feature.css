@@ -1,59 +1,55 @@
 .feature {
-  display: flex;
-  flex-direction: column; /* 垂直布局 */
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  text-align: center;
-  margin-top: 100px;
-  height: 800px; /* 固定高度 */
-  justify-content: flex-start; /* 内容顶部对齐 */
-  padding: 20px;
-  padding-bottom: 0px;
-}
-
-.feature1 {
     display: flex;
-    flex-direction: column; /* 垂直布局 */
+    flex-direction: column;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
-    margin-top: 100px;
-    height: 800px; /* 固定高度 */
-    justify-content: flex-start; /* 内容顶部对齐 */
+    height: 700px;
+    justify-content: flex-start;
     padding: 20px;
+    padding-bottom: 0px;
   }
-
-.feature-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* 内容顶部对齐 */
-}
-
-.feature-title {
-  font-size: 1.5em;
-  margin: 20px 0 10px;
-}
-
-.feature-description {
-  font-size: 1em;
-  color: #666;
-  margin-bottom: 20px; /* 确保图片与文字之间有足够的margin */
-}
-
-.feature-image-container {
-  overflow: hidden; /* 超出部分隐藏 */
-  align-self: center; /* 确保图片居中 */
-  margin-top: 100px;
-  padding-bottom: 150px;
-}
-
-.feature-image {
-  width: 100%;
-  height: auto; /* 确保图片按比例缩放 */
-  object-fit: cover; /* 确保图片按比例缩放并填充容器 */
-}
+  
+  .feature-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .feature-title {
+    font-size: 1.5em;
+    margin: 20px 0 10px;
+  }
+  
+  .feature-description {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .feature-image-container {
+    overflow: hidden;
+    align-self: center;
+    height: 100%;
+  }
+  
+  .feature-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .feature-video-container {
+    overflow: hidden;
+    align-self: center;
+    height: 100%;
+  }
+  
+  .feature-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
