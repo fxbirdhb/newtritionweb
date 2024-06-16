@@ -1,0 +1,54 @@
+/* FallingTextFeature.css */
+.falling-text-feature {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    height: 300px;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 0px;
+    position: relative;
+    color: #000; /* 确保字体颜色为黑色 */
+  }
+  
+  .falling-text-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .falling-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* 确保字符在容器中水平居中 */
+    align-items: center; /* 确保字符在容器中垂直居中 */
+    position: absolute;
+    top: 50%; /* 垂直居中 */
+    left: 50%; /* 水平居中 */
+    transform: translate(-50%, -50%); /* 确保字符居中对齐 */
+  }
+  
+  .falling-text span {
+    opacity: 0;
+    display: inline-block;
+    transform: translateY(-50px);
+    font-size: 20px; /* 确保字体大小 */
+    color: #000; /* 确保字体颜色 */
+    width: auto; /* 调整字符宽度 */
+    animation: fall 1s forwards;
+  }
+  
+  @keyframes fall {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

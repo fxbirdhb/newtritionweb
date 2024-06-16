@@ -32,11 +32,11 @@ const features1 = [
     customStyles: { backgroundColor: theme.primaryColor, height: "700px" }
   },
   {
-    type: 'image',
+    type: 'hover',
     title: "详细记录",
     description: "用户可以通过饮食日记详细记录和分析每餐的能量和营养摄入",
     image: "/images/feature5.png",
-    imageWidth: "70%",
+    hoverImage: "/images/feature6.png",
     customStyles: { backgroundColor: theme.primaryColor, height: "700px" }
   }
 ];
@@ -70,6 +70,17 @@ const features3 = [
   }
 ];
 
+const features4 = [
+  {
+    type: 'fallingText',
+    title: "字符掉落效果",
+    description: "这是一段展示字符逐个掉落效果的文本",
+    text: "新煮意是一款集饮食日记、健康计划和智能助理功能于一体的个人健康管理应用程序。使用新煮意，您无需手动录入任何内容即可建立专属的饮食日记，实时了解每日的营养摄入情况。您可以制定个性化的减重计划和运动计划，智能助理将为您提供全面的支持，包括食材营养成分分析、菜肴和套餐食谱推荐，以及健康计划建议。通过问答形式，您还可以让智能助理解答各种与身心健康相关的问题。",
+    charsPerLine: 10,
+    customStyles: { backgroundColor: theme.secondaryColor, height: "700px" }
+  }
+];
+
 const featureWidths1 = [
   { lg: 4, md: 6, sm: 12 }, // 33.33% on large screens, 50% on medium screens, 100% on small screens
   { lg: 4, md: 6, sm: 12 },
@@ -82,6 +93,10 @@ const featureWidths2 = [
 ];
 
 const featureWidths3 = [
+  { lg: 12, md: 12, sm: 12 }
+];
+
+const featureWidths4 = [
   { lg: 12, md: 12, sm: 12 }
 ];
 
@@ -99,6 +114,7 @@ function App() {
             <FeatureList features={features3} featureWidths={featureWidths3} />
             <FeatureList features={features1} featureWidths={featureWidths1} />
             <FeatureList features={features2} featureWidths={featureWidths2} />
+            <FeatureList features={features4} featureWidths={featureWidths4} />
           </div>
         </ThemeProvider>
       </div>
