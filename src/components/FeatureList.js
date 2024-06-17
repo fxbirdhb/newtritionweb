@@ -3,6 +3,7 @@ import Feature from './Feature';
 import VideoFeature from './VideoFeature';
 import HoverFeature from './HoverFeature';
 import FallingTextFeature from './FallingTextFeature';
+import ShiningDotFeature from './ShiningDotFeature'; // 引入新组件
 import './FeatureList.css';
 
 function FeatureList({ features, featureWidths }) {
@@ -21,11 +22,13 @@ function FeatureList({ features, featureWidths }) {
             case 'fallingText':
               FeatureComponent = FallingTextFeature;
               break;
+            case 'shiningDot': // 添加新组件类型
+              FeatureComponent = ShiningDotFeature;
+              break;
             default:
               FeatureComponent = Feature;
               break;
           }
-          console.log('Rendering FeatureComponent:', FeatureComponent.name); // 检查组件类型
           return (
             <div
               key={index}

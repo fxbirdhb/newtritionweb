@@ -1,0 +1,66 @@
+/* ShiningDotFeature.css */
+.shining-dot-feature {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    height: 700px;
+    justify-content: flex-start;
+    padding: 20px;
+    position: relative; /* 确保光晕相对于这个容器定位 */
+  }
+  
+  .shining-dot-feature-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .shining-dot-feature-title {
+    font-size: 1.5em;
+    margin: 20px 0 10px;
+  }
+  
+  .shining-dot-feature-description {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .shining-dot-feature-image-container {
+    position: relative; /* 确保光晕相对于图片容器定位 */
+    margin: 0 auto;
+  }
+  
+  .shining-dot-feature-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .shining-glow {
+    position: absolute;
+    width: 20px; /* 光晕大小 */
+    height: 20px; /* 光晕大小 */
+    background-color: rgba(255, 165, 0, 0.7); /* 半透明橙色 */
+    border-radius: 50%; /* 光晕为圆形 */
+    filter: blur(10px); /* 模糊效果 */
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  .shining-glow.active {
+    opacity: 1;
+    animation: glow 4s linear;
+  }
+  
+  @keyframes glow {
+    0% { top: -20px; left: -20px; }
+    25% { top: -20px; left: calc(100% + 10px); }
+    50% { top: calc(100% + 10px); left: calc(100% + 10px); }
+    75% { top: calc(100% + 10px); left: -20px; }
+    100% { top: -20px; left: -20px; }
+  }

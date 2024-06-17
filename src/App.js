@@ -1,4 +1,3 @@
-// App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -81,6 +80,17 @@ const features4 = [
   }
 ];
 
+const features5 = [
+  {
+    type: 'shiningDot',
+    title: "旋转光点效果",
+    description: "鼠标悬停在此组件上时，左上角会出现一个光点并围绕组件旋转。",
+    image: "/images/feature6.png", // 指定图片路径
+    imageWidth: "30%", // 指定图片宽度
+    customStyles: { backgroundColor: theme.primaryColor, height: "700px" }
+  }
+];
+
 const featureWidths1 = [
   { lg: 4, md: 6, sm: 12 }, // 33.33% on large screens, 50% on medium screens, 100% on small screens
   { lg: 4, md: 6, sm: 12 },
@@ -100,6 +110,10 @@ const featureWidths4 = [
   { lg: 12, md: 12, sm: 12 }
 ];
 
+const featureWidths5 = [
+  { lg: 12, md: 12, sm: 12 }
+];
+
 function App() {
   return (
     <Router>
@@ -115,6 +129,7 @@ function App() {
             <FeatureList features={features1} featureWidths={featureWidths1} />
             <FeatureList features={features2} featureWidths={featureWidths2} />
             <FeatureList features={features4} featureWidths={featureWidths4} />
+            <FeatureList features={features5} featureWidths={featureWidths5} /> {/* 添加新的组件 */}
           </div>
         </ThemeProvider>
       </div>
